@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>The Memory Makers Photography | Wedding Photography & Films in Lucknow</title>
+    <meta
+      name="description"
+      content="The Memory Makers Photography is a premium wedding photography and cinematic films studio in Lucknow with 12+ years of experience capturing weddings, pre-wedding shoots, and candid moments."
+    />
+    <link rel="canonical" href="https://www.thememorymakersphotography.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="The Memory Makers Photography" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Memory Makers Photography" />
+    <meta property="og:title" content="The Memory Makers Photography | Wedding Photography & Films in Lucknow" />
+    <meta
+      property="og:description"
+      content="Premium wedding photography and cinematic films studio based in Lucknow, capturing timeless moments for over 12 years."
+    />
+    <meta property="og:image" content="media/icon.jpeg" />
+    <meta property="og:url" content="https://www.thememorymakersphotography.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Memory Makers Photography" />
+    <meta
+      name="twitter:description"
+      content="Premium wedding photography and cinematic films studio based in Lucknow, capturing timeless moments for over 12 years."
+    />
+    <meta name="twitter:image" content="media/icon.jpeg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured data: LocalBusiness (AEO / GEO / LLMO / AISEO / E-E-A-T)
+         Lets AI answer engines and search crawlers cite exact facts (name,
+         address, phone, hours, rating, years in business) instead of
+         guessing from prose. Update the placeholder URLs/sameAs links with
+         your real domain and social profiles before publishing. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.thememorymakersphotography.com/#business",
+        "name": "The Memory Makers Photography",
+        "image": "https://www.thememorymakersphotography.com/media/icon.jpeg",
+        "description": "Premium wedding photography and cinematic films studio based in Lucknow, capturing timeless moments with artistry and passion for over 12 years.",
+        "url": "https://www.thememorymakersphotography.com/",
+        "telephone": "+91-831-820-3727",
+        "email": "info@thememorymakersphotography.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lucknow",
+          "addressRegion": "Uttar Pradesh",
+          "addressCountry": "IN"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.instagram.com/",
+          "https://www.facebook.com/"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.2",
+          "reviewCount": "5210"
+        },
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Photography" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Wedding Shoots" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Candid Photography" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cinematic Films" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Model Shoots" } }
+        ]
+      }
+    </script>
+
+    <!-- Runs before first paint so the page never flashes the wrong theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme =
+            saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- LOADING SCREEN (skeleton preview) -->
+    <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+      <div class="skeleton-page">
+        <div class="skeleton-nav">
+          <div class="skeleton skeleton-logo"></div>
+          <div class="skeleton-nav-links">
+            <div class="skeleton skeleton-pill"></div>
+            <div class="skeleton skeleton-pill"></div>
+            <div class="skeleton skeleton-pill"></div>
+            <div class="skeleton skeleton-pill"></div>
+          </div>
+          <div class="skeleton skeleton-avatar"></div>
+        </div>
+        <div class="skeleton-hero">
+          <div class="skeleton skeleton-line skeleton-line-eyebrow"></div>
+          <div class="skeleton skeleton-line skeleton-line-title"></div>
+          <div class="skeleton skeleton-line skeleton-line-sub"></div>
+          <div class="skeleton skeleton-pill skeleton-cta"></div>
+        </div>
+        <div class="skeleton-grid">
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+        </div>
+      </div>
+      <div class="loading-brand">
+        <span class="loading-brand-name">The Memory Makers Photography</span>
+        <span class="loading-brand-sub">Loading your story…</span>
+      </div>
+    </div>
+
+    <!-- Cinematic cursor / film trail canvas -->
+    <canvas class="film-trail-canvas" id="filmTrail" aria-hidden="true"></canvas>
+
+    <!-- Film grain overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Light leak overlay -->
+    <div class="light-leak" aria-hidden="true">
+      <span class="light-leak-blob blob-1"></span>
+      <span class="light-leak-blob blob-2"></span>
+      <span class="light-leak-blob blob-3"></span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="navbar-inner" id="navbarInner">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <img src="media/icon.jpeg" alt="Startup logo" class="nav-logo-icon" />
+          <span class="nav-logo-text">Startup</span>
+        </a>
+
+        <!-- Desktop nav items -->
+        <nav class="nav-items" id="navItems">
+          <a href="#home" class="nav-item">Home</a>
+          <a href="#about" class="nav-item">About</a>
+          <a href="#features" class="nav-item">Services</a>
+          <a href="#works" class="nav-item">Gallery</a>
+          <a href="#testimonials" class="nav-item">Testimonials</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+
+        <!-- Desktop buttons -->
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to dark mode"
+          >
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-secondary">Login</button>
+          <button class="btn btn-primary">Book a call</button>
+        </div>
+
+        <!-- Mobile toggle -->
+        <button
+          class="mobile-toggle"
+          id="mobileToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="bar bar-top"></span>
+          <span class="bar bar-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#features" class="nav-item">Services</a>
+        <a href="#works" class="nav-item">Gallery</a>
+        <a href="#testimonials" class="nav-item">Testimonials</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <div class="mobile-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggleMobile"
+            type="button"
+            aria-label="Switch to dark mode"
+          >
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-secondary btn-full">Login</button>
+          <button class="btn btn-primary btn-full">Book a call</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <video class="hero-video" data-parallax="0.35" autoplay muted loop playsinline>
+        <source src="media/video_1.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Your headline here</h1>
+        <p>A short supporting line goes here.</p>
+        <button class="btn btn-primary">Get started</button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-media">
+          <img
+            src="media/pexels-eberhardgross-443446.jpg"
+            alt="Team working together"
+            class="about-img"
+            data-parallax="0.15"
+          />
+        </div>
+        <div class="about-content">
+          <span class="about-eyebrow">About us</span>
+          <h2 class="about-title">Built for people who move fast</h2>
+          <p class="about-text">
+            We started this company because we were tired of tools that got in
+            the way instead of helping. Every feature we ship is built around
+            one question: does this make the work easier, or just louder?
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">10k+</span>
+              <span class="stat-label">Active users</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Uptime</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support</span>
+            </div>
+          </div>
+          <button class="btn btn-primary">Learn more</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="features-inner">
+        <div class="features-header">
+          <span class="about-eyebrow">Features</span>
+          <h2 class="features-title">Everything you need, nothing you don't</h2>
+          <p class="features-subtitle">
+            A focused set of tools built to remove friction, not add it.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img loading="lazy" decoding="async" src="media/icon-speed.svg" alt="" />
+            </div>
+            <h3 class="feature-name">Built for speed</h3>
+            <p class="feature-desc">
+              Every interaction responds instantly, no matter how much data
+              you're working with.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img loading="lazy" decoding="async" src="media/icon-secure.svg" alt="" />
+            </div>
+            <h3 class="feature-name">Secure by default</h3>
+            <p class="feature-desc">
+              Your data is encrypted end-to-end and never shared without your
+              permission.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img loading="lazy" decoding="async" src="media/icon-sync.svg" alt="" />
+            </div>
+            <h3 class="feature-name">Always in sync</h3>
+            <p class="feature-desc">
+              Changes update in real time across every device you use.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img loading="lazy" decoding="async" src="media/icon-support.svg" alt="" />
+            </div>
+            <h3 class="feature-name">Real human support</h3>
+            <p class="feature-desc">
+              Talk to an actual person whenever something isn't working the way
+              it should.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section class="works" id="works">
+      <div class="works-inner">
+        <div class="features-header">
+          <span class="about-eyebrow">Our work</span>
+          <h2 class="features-title">A few things we've built</h2>
+          <p class="features-subtitle">
+            A mix of projects across product, brand, and experiments.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- a: color card -->
+          <div
+            class="bento-card bento-color bento-a"
+            style="--card-color: #111"
+          >
+            <span class="bento-label">Upgrade discount</span>
+            <p class="bento-price">$12.99</p>
+            <span class="bento-note">Discount code</span>
+          </div>
+
+          <!-- b: color card -->
+          <div
+            class="bento-card bento-color bento-b"
+            style="--card-color: #0f8a4c"
+          >
+            <span class="bento-label">Urbanist font</span>
+            <span class="bento-big-letters">Aa</span>
+          </div>
+
+          <!-- c: image card -->
+          <a href="#" class="bento-card bento-image bento-c">
+            <img loading="lazy" decoding="async"
+              src="media/pexels-jplenio-10781049.jpg"
+              alt="Storefront signage"
+              class="bento-img"
+            />
+          </a>
+
+          <!-- d: tall image card -->
+          <a href="#" class="bento-card bento-image bento-d">
+            <img loading="lazy" decoding="async"
+              src="media/pexels-icon0-130154.jpg"
+              alt="Product photo"
+              class="bento-img"
+            />
+          </a>
+
+          <!-- e: image card -->
+          <a href="#" class="bento-card bento-image bento-e">
+            <img loading="lazy" decoding="async"
+              src="media/pexels-jplenio-1146708.jpg"
+              alt="App screen"
+              class="bento-img"
+            />
+          </a>
+
+          <!-- f: white logo card -->
+          <div class="bento-card bento-white bento-f">
+            <img loading="lazy" decoding="async" src="media/icon.jpeg" alt="Logo" class="bento-logo" />
+            <span class="bento-logo-text">Startup</span>
+          </div>
+
+          <!-- g: image card -->
+          <a href="#" class="bento-card bento-image bento-g">
+            <img loading="lazy" decoding="async"
+              src="media/pexels-eberhardgross-443446.jpg"
+              alt="Billboard mockup"
+              class="bento-img"
+            />
+          </a>
+
+          <!-- h: color card -->
+          <div
+            class="bento-card bento-color bento-h"
+            style="--card-color: #0f8a4c"
+          >
+            <p class="bento-tagline">Connecting Ideas, Empowering Innovation</p>
+          </div>
+
+          <!-- i: tall image card -->
+          <a href="#" class="bento-card bento-image bento-i">
+            <img loading="lazy" decoding="async"
+              src="media/pexels-jplenio-10781049.jpg"
+              alt="Product in hand"
+              class="bento-img"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-bg-blob blob-a"></div>
+      <div class="testimonials-bg-blob blob-b"></div>
+
+      <div class="testimonials-inner">
+        <div class="testimonials-header">
+          <h2 class="testimonials-title">
+            Read reviews,<br />
+            <strong>ride with confidence.</strong>
+          </h2>
+          <div class="trustpilot-row">
+            <span class="tp-score">4.2/5</span>
+            <span class="tp-star">★</span>
+            <span class="tp-name">Trustpilot</span>
+            <span class="tp-based">Based on 5210 reviews</span>
+          </div>
+        </div>
+
+        <div class="testimonials-body">
+          <div class="testimonials-side">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <h3 class="testimonials-side-title">
+              What our customers are saying
+            </h3>
+            <div class="testimonials-nav">
+              <button class="t-arrow" id="tPrev" aria-label="Previous review">
+                ←
+              </button>
+              <div class="t-progress">
+                <div class="t-progress-bar" id="tProgressBar"></div>
+              </div>
+              <button class="t-arrow" id="tNext" aria-label="Next review">
+                →
+              </button>
+            </div>
+          </div>
+
+          <div class="testimonials-track-wrap">
+            <div class="testimonials-track" id="testimonialsTrack">
+              <article class="t-card">
+                <p class="t-text">
+                  My buying experience is so nice, and received me very
+                  politely. Riding experience is also very good. Very good
+                  performance. I never experienced such a kind of performance.
+                  Very good service.
+                </p>
+                <div class="t-stars">★★★★★</div>
+                <div class="t-author">
+                  <div class="t-avatar" style="--av-color: #f97316">K</div>
+                  <div>
+                    <div class="t-name">Karan</div>
+                    <div class="t-time">1 week ago</div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="t-card">
+                <p class="t-text">
+                  I love my e-bike and the customer service is excellent. They
+                  respond in a timely manner with loads of information about
+                  e-bikes, accessories and maintenance information.
+                </p>
+                <div class="t-stars">★★★★★</div>
+                <div class="t-author">
+                  <div class="t-avatar" style="--av-color: #0ea5e9">C</div>
+                  <div>
+                    <div class="t-name">Catherine</div>
+                    <div class="t-time">10 days ago</div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="t-card">
+                <p class="t-text">
+                  Visited the EO store. Product quality is great, particularly
+                  welds and looks. My wife and I took small test rides in the
+                  parking lot area. We bought two bikes with customization after
+                  the team went over all the options. Very satisfied.
+                </p>
+                <div class="t-stars">★★★★★</div>
+                <div class="t-author">
+                  <div class="t-avatar" style="--av-color: #22c55e">P</div>
+                  <div>
+                    <div class="t-name">Peter</div>
+                    <div class="t-time">2 weeks ago</div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="t-card">
+                <p class="t-text">
+                  Support has been fantastic from day one. Delivery was fast and
+                  the bike arrived exactly as described, well packaged and easy
+                  to assemble.
+                </p>
+                <div class="t-stars">★★★★★</div>
+                <div class="t-author">
+                  <div class="t-avatar" style="--av-color: #a855f7">M</div>
+                  <div>
+                    <div class="t-name">Maya</div>
+                    <div class="t-time">3 weeks ago</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="testimonials-visit">↗ Visit site</a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-header">
+          <p>— Contact Us</p>
+          <h2>
+            Join Us in Creating <br />
+            Something Great
+          </h2>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form>
+              <div class="row">
+                <input
+                  type="text"
+                  name="first_name"
+                  autocomplete="given-name"
+                  placeholder="First Name *"
+                  aria-label="First Name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="last_name"
+                  autocomplete="family-name"
+                  placeholder="Last Name *"
+                  aria-label="Last Name"
+                  required
+                />
+              </div>
+
+              <div class="row">
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="Email *"
+                  aria-label="Email"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  autocomplete="tel"
+                  placeholder="Phone Number *"
+                  aria-label="Phone Number"
+                  required
+                />
+              </div>
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject *"
+                aria-label="Subject"
+                required
+              />
+
+              <textarea
+                rows="6"
+                name="message"
+                placeholder="Message *"
+                aria-label="Message"
+                required
+              ></textarea>
+
+              <button type="submit">Send Message →</button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+
+          <div class="contact-info">
+            <div class="info-box">
+              <h3>Address</h3>
+              <p>
+                45 King Street<br />
+                New York, NY 10001
+              </p>
+
+              <h3>Contact</h3>
+              <p><a href="tel:+919876543210">+91 9876543210</a></p>
+              <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+
+              <h3>Open Time</h3>
+              <p>Monday - Friday</p>
+              <p>9:00 AM - 6:00 PM</p>
+
+              <h3>Stay Connected</h3>
+
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+
+        <div class="map">
+          <iframe
+            title="Studio location map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.9739846190187!2d82.20317432547839!3d26.808956976709165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a0784e30fab23%3A0x5e14268ebaacbcbf!2sRam%20Ki%20Paidi!5e0!3m2!1sen!2sin!4v1783437318585!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About -->
+
+        <div class="footer-col about">
+          <img loading="lazy" decoding="async" src="media/icon.jpeg" alt="Logo" class="footer-logo" />
+
+          <p>
+            Premium wedding photography & cinematic films studio based in
+            Lucknow. Capturing timeless moments with artistry and passion for
+            over 12 years.
+          </p>
+
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About Us</a></li>
+
+            <li><a href="#features">Services</a></li>
+
+            <li><a href="#works">Gallery</a></li>
+
+            <li><a href="#testimonials">Testimonials</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+
+        <div class="footer-col">
+          <h3>Services</h3>
+
+          <ul>
+            <li><a href="#">Wedding Photography</a></li>
+
+            <li><a href="#">Pre-Wedding Shoots</a></li>
+
+            <li><a href="#">Candid Photography</a></li>
+
+            <li><a href="#">Cinematic Films</a></li>
+
+            <li><a href="#">Model Shoots</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              Lucknow, Uttar Pradesh, India
+            </li>
+
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+918318203727">+91 831 820 3727</a>
+            </li>
+
+            <li>
+              <i class="far fa-envelope"></i>
+              <a href="mailto:info@thememorymakersphotography.com"
+                >info@thememorymakersphotography.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+
+      <div class="footer-bottom">
+        <p>© 2026 The Memory Makers Photography. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
